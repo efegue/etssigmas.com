@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f4fa;
+  color: #003087;
+  text-align: center;
+}
+
+header {
+  background: #003087;
+  color: white;
+  padding: 20px 10px;
+}
+
+header h1 {
+  font-size: 28px;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+header h2 {
+  font-size: 16px;
+  margin-top: 5px;
+  font-weight: normal;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 15px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.group-photo img {
+  width: 100%;
+  max-width: 1000px;
+  margin: 30px auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.contact {
+  padding: 30px 10px;
+  background: white;
+  border-top: 2px solid #ccc;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 120px;
+  margin: 15px;
+}
+
+.social {
+  margin: 0 40px;
+}
+
+.social h3 {
+  margin: 10px 0;
+}
+
+.social a img {
+  width: 30px;
+  margin: 5px;
+}
+
+footer {
+  background: #003087;
+  color: white;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .logos {
+    flex-direction: column;
+  }
+
+  .social {
+    margin: 20px 0;
+  }
+}
