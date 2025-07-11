@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleHamburgerClick = () => {
+    setMenuOpen((prev) => !prev);
+  };
+
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <header>
       <h1>EPSILON THETA SIGMA CHAPTER</h1>
       <h2>PHI BETA SIGMA FRATERNITY, INC.</h2>
-      <nav>
-        <ul>
+      <button className="hamburger" onClick={handleHamburgerClick} aria-label="Toggle menu">
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </button>
+      <nav className={menuOpen ? 'open' : ''}>
+        {menuOpen && (
+          <button className="close-menu" onClick={closeMenu} aria-label="Close menu">
+            &times;
+          </button>
+        )}
+        <ul onClick={closeMenu}>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About Our Chapter</Link></li>
           <li><Link to="/history">History & Mission</Link></li>

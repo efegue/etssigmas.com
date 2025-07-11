@@ -57,6 +57,13 @@ function About() {
                   <img 
                     src={leader.image} 
                     alt={`${leader.name} - ${leader.position}`}
+                    loading="lazy"
+                    srcSet={
+                      leader.image.replace('.jpg', '-400.jpg') + ' 400w, ' +
+                      leader.image.replace('.jpg', '-800.jpg') + ' 800w, ' +
+                      leader.image.replace('.jpg', '-1200.jpg') + ' 1200w'
+                    }
+                    sizes="(max-width: 600px) 100vw, (max-width: 400px) 100vw, 400px"
                     onError={(e) => {
                       e.target.style.display = 'none';
                       e.target.nextSibling.style.display = 'flex';

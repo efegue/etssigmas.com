@@ -11,6 +11,7 @@ header {
   color: white;
   padding: 20px 10px;
   text-align: center;
+  position: relative;
 }
 
 header h1 {
@@ -456,9 +457,41 @@ li {
   font-style: italic;
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+.hamburger .bar {
+  width: 28px;
+  height: 4px;
+  background: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
 @media screen and (max-width: 600px) {
   nav ul {
     flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0 !important;
+    padding: 8px 0;
+  }
+
+  nav ul li a {
+    padding: 12px 0;
+    display: block;
+    font-size: 1.1em;
   }
 
   .logos {
@@ -497,5 +530,66 @@ li {
 
   .leader-info {
     padding: 20px;
+  }
+
+  .hamburger {
+    display: flex;
+    position: static;
+    margin: 16px auto 0 auto;
+    z-index: 1001;
+  }
+  nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 48, 135, 0.97);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  nav.open {
+    display: flex;
+  }
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li {
+    margin: 18px 0 !important;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  nav ul li a {
+    padding: 18px 0;
+    display: block;
+    font-size: 1.2em;
+    color: #fff;
+    width: 100%;
+    transition: background 0.2s;
+  }
+  nav ul li a:hover {
+    background: #4169E1;
+    color: #fff;
+  }
+  .close-menu {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2.5rem;
+    z-index: 1100;
+    cursor: pointer;
+    padding: 0 12px;
+    line-height: 1;
   }
 } 

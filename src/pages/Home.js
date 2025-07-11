@@ -4,7 +4,13 @@ function Home() {
   return (
     <div className="home-page">
       <section className="group-photo">
-        <img src="group_photo.jpg" alt="ETS Chapter Group Photo" />
+        <img 
+          src="group_photo.jpg" 
+          alt="ETS Chapter Group Photo" 
+          loading="lazy"
+          srcSet="group_photo-400.jpg 400w, group_photo-800.jpg 800w, group_photo-1200.jpg 1200w"
+          sizes="(max-width: 600px) 100vw, (max-width: 1000px) 100vw, 1000px"
+        />
       </section>
       
       <section className="welcome">
