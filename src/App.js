@@ -15,6 +15,7 @@ import Events from './pages/Events';
 import Gallery from './pages/Gallery';
 import SigmaBetaClub from './pages/SigmaBetaClub';
 import Members from './pages/Members';
+import PayDues from './pages/PayDues';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/sigma-beta-club" element={<SigmaBetaClub />} />
             <Route path="/members" element={<Members />} />
+            <Route path="/pay-dues" element={<PayDues />} />
           </Routes>
         </main>
         

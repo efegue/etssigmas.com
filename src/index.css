@@ -106,7 +106,7 @@ main {
 }
 
 .welcome, .about-content, .history-content, .events-content, 
-.sigma-beta-club-content, .members-content, .gallery-content {
+.sigma-beta-club-content, .members-content, .gallery-content, .pay-dues-content {
   max-width: 1200px;
   margin: 0 auto;
   text-align: left;
@@ -214,14 +214,14 @@ header * {
 }
 
 .welcome h2, .about-content h2, .history-content h2, 
-.events-content h2, .sigma-beta-club-content h2, .members-content h2, .gallery-content h2 {
+.events-content h2, .sigma-beta-club-content h2, .members-content h2, .gallery-content h2, .pay-dues-content h2 {
   text-align: center;
   color: #003087;
   margin-bottom: 30px;
 }
 
 .about-section, .history-section, .events-section, 
-.club-section, .members-section, .gallery-section {
+.club-section, .members-section, .gallery-section, .pay-dues-section {
   margin-bottom: 40px;
   background: white;
   padding: 25px;
@@ -230,7 +230,7 @@ header * {
 }
 
 .about-section h3, .history-section h3, .events-section h3, 
-.club-section h3, .members-section h3, .gallery-section h3 {
+.club-section h3, .members-section h3, .gallery-section h3, .pay-dues-section h3 {
   color: #003087;
   margin-bottom: 15px;
 }
@@ -368,6 +368,94 @@ li {
   margin-bottom: 8px;
 }
 
+/* Pay Dues specific styles */
+.dues-intro {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.dues-options {
+  margin-top: 30px;
+}
+
+.dues-options h3 {
+  color: #003087;
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #003087;
+  padding-bottom: 10px;
+}
+
+.dues-list {
+  margin-bottom: 40px;
+}
+
+.dues-item {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #003087;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dues-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.dues-item h4 {
+  color: #003087;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.dues-item p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.dues-item a {
+  color: #003087;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px solid #003087;
+  transition: color 0.3s ease;
+}
+
+.dues-item a:hover {
+  color: #4169E1;
+  border-bottom-color: #4169E1;
+}
+
+.reactivation-notice {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 30px 0;
+}
+
+.reactivation-notice h4 {
+  color: #856404;
+  margin-bottom: 10px;
+}
+
+.processing-fee-notice {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px;
+  background: #e8f4fd;
+  border-radius: 8px;
+  border: 1px solid #bee5eb;
+}
+
+.processing-fee-notice p {
+  margin: 0;
+  color: #0c5460;
+  font-style: italic;
+}
+
 @media screen and (max-width: 600px) {
   nav ul {
     flex-direction: column;
@@ -386,7 +474,7 @@ li {
   }
 
   .welcome, .about-content, .history-content, .events-content, 
-  .sigma-beta-club-content, .members-content, .gallery-content {
+  .sigma-beta-club-content, .members-content, .gallery-content, .pay-dues-content {
     padding: 10px;
   }
 

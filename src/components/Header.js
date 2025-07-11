@@ -15,6 +15,7 @@ function Header() {
           <li><Link to="/gallery">Chapter Gallery</Link></li>
           <li><Link to="/sigma-beta-club">Sigma Beta Club</Link></li>
           <li><Link to="/members">Members Only</Link></li>
+          <li><Link to="/pay-dues">Pay Dues</Link></li>
         </ul>
       </nav>
     </header>
